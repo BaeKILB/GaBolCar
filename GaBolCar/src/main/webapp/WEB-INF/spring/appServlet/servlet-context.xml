@@ -24,7 +24,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.team3project1.tabolcar" />
+	<context:component-scan base-package="com.team3project1.gabolcar" />
 	
 
 	

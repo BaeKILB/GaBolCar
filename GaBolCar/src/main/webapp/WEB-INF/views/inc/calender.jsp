@@ -49,7 +49,7 @@
 			<div class="cal_hour_rent">
 				<div>대여일시</div>
 				<select name="rentHour" id="rentHour">
-					<c:forEach var="i" begin="0" end="23">
+					<c:forEach var="i" begin="8" end="21">
 						<c:choose>
 							<c:when test="${ i == 15 }">
 								<option value="${ i }" selected="selected">${ i }</option>
@@ -79,7 +79,7 @@
 				<div>반납일시</div>
 
 				<select name="returnHour" id="returnHour">
-					<c:forEach var="i" begin="0" end="23">
+					<c:forEach var="i" begin="8" end="21">
 						<c:choose>
 						
 							<c:when test="${ i == 15 }">
@@ -112,52 +112,7 @@
 	-->
 	<script> 
 	
-	// 만약 파라미터 값이 있을때 체크해서 있으면 파라미터 값으로 항목들 셋팅 
-	let getParams = new URL(location.href).searchParams;
-	
-	
-	if(getParams.size > 0){
-		let date = getParams.get("rentDate").split("to").map(e => e.trim());
-		
-		// date 의 갯수가 2개여야 정상 동작함으로 따로 체크
-		if(date.length == 2){
-			flatpickr(".cal-input",{
-				inline:true,
-				mode:"range",
-				minDate:"today",
-				dateFormat: "Y-m-d",
-				//기본 설정 날짜 지정
-				defaultDate:[new Date(date[0]) , new Date(date[1])]
-			});
-		}
-		else{	
-			flatpickr(".cal-input",{
-				inline:true,
-				mode:"range",
-				minDate:"today",
-				dateFormat: "Y-m-d",
-				//기본 설정 날짜 지정
-				defaultDate:[new Date() , new Date().fp_incr(2)]
-			});
-		}
-		
-		// 나머지 항목들 체크
-		$("#rentHour").val(getParams.get("rentHour")).prop("selected",true);
-		$("#rentMinute").val(getParams.get("rentMinute")).prop("selected",true);
-		$("#returnHour").val(getParams.get("returnHour")).prop("selected",true);
-		$("#returnMinute").val(getParams.get("returnMinute")).prop("selected",true);
-	}	
-	else{	
-		flatpickr(".cal-input",{
-			inline:true,
-			mode:"range",
-			minDate:"today",
-			dateFormat: "Y-m-d",
-			//기본 설정 날짜 지정
-			defaultDate:[new Date() , new Date().fp_incr(2)]
-		});
-	}
-	
+
 	// 현재 날짜 시간 체크해서 이전 시간대이면 검색 안되도록 하기
 	
 	function menuCheck(){
@@ -210,15 +165,83 @@
 	//첫 시작시 대여일 반납일 초기화 메서드 수행
 	
 	function initCal() {
-
+		
 		let nowDate = new Date();
 		let calInput = document.querySelector(".cal-input");
-		updateCalRent(calInput);
 		
-		//최초 시간값 설정
-		let initTime = nowDate.getHours()+1;
-		if(initTime >= 24) initTime = 0;
-		$("#rentHour").val(initTime);
+		// 만약 파라미터 값이 있을때 체크해서 있으면 파라미터 값으로 항목들 셋팅 
+		let getParams = new URL(location.href).searchParams;
+		
+		
+		if(getParams.size > 0){
+			let date = getParams.get("rentDate").split("to").map(e => e.trim());
+			
+			// 시간 항목 체크
+			
+			$("#rentHour").val(getParams.get("rentHour")).prop("selected",true);
+			$("#rentMinute").val(getParams.get("rentMinute")).prop("selected",true);
+			$("#returnHour").val(getParams.get("returnHour")).prop("selected",true);
+			$("#returnMinute").val(getParams.get("returnMinute")).prop("selected",true);
+			
+			// date 의 갯수가 2개여야 정상 동작함으로 따로 체크
+			if(date.length == 2){
+				flatpickr(".cal-input",{
+					inline:true,
+					mode:"range",
+					minDate:"today",
+					dateFormat: "Y-m-d",
+					//기본 설정 날짜 지정
+					defaultDate:[new Date(date[0]) , new Date(date[1])]
+				});
+			}
+			else{	// date의 갯수가 비정상인 경우	
+				flatpickr(".cal-input",{
+					inline:true,
+					mode:"range",
+					minDate:"today",
+					dateFormat: "Y-m-d",
+					//기본 설정 날짜 지정
+					defaultDate:[nowDate , new Date().fp_incr(2)]
+				});
+			}
+			
+		}	
+		else{	
+			// 시간값 설정 위한 변수 만들기
+			// 현 시간보다 2시간 뒤로 설정
+			let initTime = nowDate.getHours()+2;
+			
+			
+			
+			//최초 날짜 , 시간값 설정
+			// 시간값 설정 시 오픈시간보다 뒤면 다음날 날짜로 지정, 시간은 8시로지정
+			if(initTime >= 20) {
+				initTime = "08";
+				flatpickr(".cal-input",{
+					inline:true,
+					mode:"range",
+					minDate:"today",
+					dateFormat: "Y-m-d",
+					//기본 설정 날짜 지정
+					defaultDate:[new Date().fp_incr(1) , new Date().fp_incr(3)]
+				});
+			}
+			else{
+				if(initTime < 10) initTime = "0" + initTime; 
+				flatpickr(".cal-input",{
+					inline:true,
+					mode:"range",
+					minDate:"today",
+					dateFormat: "Y-m-d",
+					//기본 설정 날짜 지정
+					defaultDate:[nowDate , new Date().fp_incr(2)]
+				});
+			}
+			$("#rentHour").val(initTime);
+		}
+
+		
+		updateCalRent(calInput);
 		
 	}
 	initCal();

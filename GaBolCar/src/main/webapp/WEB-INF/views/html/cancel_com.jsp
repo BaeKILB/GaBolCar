@@ -5,10 +5,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>예약 완료</title>
-	<link href="../css/common.css" rel="styleSheet">
-	<link href="../css/res_com.css" rel="styleSheet">
-	<link href="../inc/css/top.css" rel="styleSheet">
-	<link href="../inc/css/footer.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/common.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/res_com.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/inc/top.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/inc/footer.css" rel="styleSheet">
+	<script src="${pageContext.request.contextPath }/resources/js/jquery-3.7.0.js"></script>
+	
 </head>
 <body>
 	<header>

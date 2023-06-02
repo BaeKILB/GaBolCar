@@ -5,19 +5,19 @@
 	<header id="header">
 		<div class="top_wrapper">
 			<h1 class="h_logo">
-				<a href="/tabolcar"></a>
+				<a href="${pageContext.request.contextPath }"></a>
 			</h1>
 			<nav class="top_nav">
 				<ul class="gnb">
-					<li class="gnb_cont"><a href="carRes">차량예약</a></li>
-					<li class="gnb_cont"><a href="carInfo">차량안내</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/carRes">차량예약</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/carInfo">차량안내</a></li>
 					<li class="gnb_cont"><a href="#">고객센터</a>
 						<ul class="sub_menu shadow" style="display: none;">
 							<li><a href="notice">공지사항</a></li>
 							<li><a href="siteFAQ">FAQ</a></li>
 							<li><a href="#">1:1 문의</a></li>
 						</ul></li>
-					<li class="gnb_cont"><a href="resInq">예약확인</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/resInq">예약확인</a></li>
 				</ul>
 				
 				<%-- 0531 추가 
@@ -26,11 +26,11 @@
 					<c:choose>
 						<c:when test="${empty sessionScope.sId }">
 							<li>
-								<a href="login"> <i class="xi-user"></i> 로그인
+								<a href="${pageContext.request.contextPath }/login"> <i class="xi-user"></i> 로그인
 								</a>
 							</li>
 							<li class="btn_register">
-								<a href="signup"> 회원가입 </a>
+								<a href="${pageContext.request.contextPath }/signup"> 회원가입 </a>
 							</li>
 						</c:when>
 						<c:otherwise>
@@ -51,7 +51,7 @@
 	<header class="header mb">
 		<div class="top_wrapper">
 			<h2 class="h_logo">
-				<a href="./"></a>
+				<a href="${pageContext.request.contextPath }"></a>
 			</h2>
 			<div class="hbg_btn">
 				<span></span> <span></span> <span></span>
@@ -64,18 +64,18 @@
 		<div class="menu">
 			<div class="menu_wrap">
 				<h2 class="h_logo">
-					<a href="./"></a>
+					<a href="${pageContext.request.contextPath }"></a>
 				</h2>
 				<ul class="menu_section">
-					<li class="gnb_cont"><a href="carRes">차량예약</a></li>
-					<li class="gnb_cont"><a href="carInfo">차량안내</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/carRes">차량예약</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/carInfo">차량안내</a></li>
 					<li class="gnb_cont plus"><a href="#">고객센터</a>
 						<ul class="sub_menu" style="display: block;">
-							<li><a href="notice">공지사항</a></li>
-							<li><a href="siteFAQ">FAQ</a></li>
+							<li><a href="${pageContext.request.contextPath }/notice">공지사항</a></li>
+							<li><a href="${pageContext.request.contextPath }/siteFAQ">FAQ</a></li>
 							<li><a href="#">1:1 문의</a></li>
 						</ul></li>
-					<li class="gnb_cont"><a href="resInq">예약확인</a></li>
+					<li class="gnb_cont"><a href="${pageContext.request.contextPath }/resInq">예약확인</a></li>
 					<%-- 0531 추가 
 						로그인 현황 체크하여 항목 띄우기--%>
 					
@@ -83,11 +83,11 @@
 					<c:choose>
 						<c:when test="${empty sessionScope.sId }">
 						<li>
-							<a href="login"> <i class="xi-user"></i> 로그인
+							<a href="${pageContext.request.contextPath }/login"> <i class="xi-user"></i> 로그인
 							</a>
 						</li>
 						<li>
-							<a href="signup"> <i class="xi-user"></i> 회원가입
+							<a href="${pageContext.request.contextPath }/signup"> <i class="xi-user"></i> 회원가입
 							</a>
 						</li>
 						</c:when>
