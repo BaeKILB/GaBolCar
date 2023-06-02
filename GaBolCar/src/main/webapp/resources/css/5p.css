@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* 0531 추가 */
+.header{
+	margin-top:150px;
+}
+
+
+.res_info {
+    border: 1px solid grey;
+    position: relative;    
+    margin: 50px;
+    background-color: lightgrey ;
+}
+
+.res_info li {
+    margin-top: 20px;
+}
+
+.payment_info {
+    border: 1px solid grey;
+    position: relative;
+    margin: 50px;
+    background-color: lightgrey ;
+}
+
+.payment_info li {
+    margin-top: 20px;
+}
+
+.finish_btn {
+    text-align: center;
+}
+
