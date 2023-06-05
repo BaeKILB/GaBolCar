@@ -392,7 +392,7 @@
 					</p>
 				</div>
 			</fieldset>
-			<a href="/tabolcar/resCom" class="res_p">예약하기</a>
+			<a href="${pageContext.request.contextPath }/resCom" class="res_p">예약하기</a>
 		</form>
 	</section>
 	

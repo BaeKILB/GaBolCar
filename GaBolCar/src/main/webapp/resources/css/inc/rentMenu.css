@@ -9,6 +9,9 @@
 	margin: 0;
 }
 
+.rent_menu *{
+	font-size: 16px !important;
+}
 .rent_menu ul {
 	margin: 0;
 	padding: 0;

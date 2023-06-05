@@ -346,7 +346,7 @@
 	display: inline-block;
 	width: 100%;
 	height: 100%;
-	background: url(../img/icn_pager_arrow.png) no-repeat;
+	background: url(/img/icn_pager_arrow.png) no-repeat;
 }
 
 #board_list .list_pager_wrap .pager_prev {
@@ -440,28 +440,28 @@
 .pg_start {
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(../img/faq_notice/btn_first.gif) no-repeat 50% 50%;
+	background: url(../img/btn_first.gif) no-repeat 50% 50%;
 	padding: 0
 }
 
 .pg_prev {
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(../img/faq_notice/btn_prev.gif) no-repeat 50% 50%;
+	background: url(../img/btn_prev.gif) no-repeat 50% 50%;
 	padding: 0
 }
 
 .pg_end {
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(../img/faq_notice/btn_end.gif) no-repeat 50% 50%;
+	background: url(../img/btn_end.gif) no-repeat 50% 50%;
 	padding: 0
 }
 
 .pg_next {
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(../img/faq_notice/btn_next.gif) no-repeat 50% 50%;
+	background: url(../img/btn_next.gif) no-repeat 50% 50%;
 	padding: 0
 }
 
@@ -481,3 +481,21 @@
 	background-color: #ff6600;
 	border-radius: 50%
 }
+
+.write_btn {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.write_btn a {
+	padding: 6px 15px;
+	background: rgb(10, 10, 49);
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.4s;
+}
+
+.write_btn a:hover {
+	background: #ff6600;
+}
+

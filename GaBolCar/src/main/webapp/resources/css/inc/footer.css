@@ -16,9 +16,7 @@
 
 ol, ul {
 	list-style: none;
-	      /* 0531 추가 : 부트스트랩 영향 제거 */
-        	padding-left:0 !important;
-        	margin-bottom: 0 !important;
+
 }
 
 a {
@@ -29,15 +27,7 @@ address {
 	font-style: normal;
 }
 
-	 /* 0531 추가 : 부트스트랩 영향 제거 */
-p {
-	margin-bottom: 0 !important;
-}
-address,.area_copy{
-	
-    line-height: normal !important;
-}
-/* ============================== */
+
 .inr {
 	position: relative;
 	max-width: 1400px;

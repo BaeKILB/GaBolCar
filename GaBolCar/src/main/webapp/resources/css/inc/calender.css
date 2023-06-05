@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-
+.calender *{
+	font-size: 16px !important;
+}
 .calender ul { 
 	list-style-type: none;
 }

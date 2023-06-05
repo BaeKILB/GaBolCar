@@ -32,65 +32,79 @@ public class HomeController {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		return "main";
 	}
-	
+	//차량 예약 검색
 	@GetMapping("carRes")
 	public String carRes() {
 		return "html/car_res";
 	}
+	// 예약 차량 상세 정보
 	@GetMapping("carRes/carDetail")
 	public String carIntroduce() {
 		return "html/project3_2";
 	}
+	//차량 예약 정보 작성 폼
 	@GetMapping("carRes/resInfo")
 	public String resInfo() {
 		return "html/4-3";
 	}
 	
+	// 차량 예약 완료 페이지
+
+	@GetMapping("resResult")
+	public String resResult() {
+		return "html/res_com";
+	}
 	
+	// 멤버) 차량 예약 조회
 	@GetMapping("resInq")
 	public String resInq() {
 		return "html/res_inq";
 	}
-	@GetMapping("member")
+	
+	//회원 정보 수정
+	@GetMapping("memberUpdate")
 	public String member() {
-		return "html/member";
+		return "html/member_update";
 	}
+	
+	//로그인 페이지
 	@GetMapping("login")
 	public String login() {
 		return "html/login";
 	}
 
-
+	//차량 소개
 	@GetMapping("carInfo")
 	public String carInfo() {
 		return "html/6p";
 	}
 	
-	@GetMapping("resCom")
-	public String resCom() {
-		return "html/res_com";
-	}
+	//회원가입
 	@GetMapping("signup")
 	public String signup() {
 		return "html/signup";
 	}
-	@GetMapping("resResult")
-	public String resResult() {
-		return "html/res_com";
-	}
+	
 
+	//예약 상세 정보
 	@GetMapping("resDetail")
 	public String resDetail() {
 		return "html/res_detail";
 	}
+	
+	// 찾아 오는 길
 	@GetMapping("branchLocation")
 	public String branchLocation() {
 		return "html/branch_location";
 	}
+	
+	// 관리자) 차량 등록
 	@GetMapping("carLeg")
 	public String carLeg() {
 		return "html/car_leg2";
 	}
+	
+	
 	@GetMapping("memberFind")
 	public String memberFind() {
 		return "html/Find";
@@ -105,17 +119,36 @@ public class HomeController {
 	}
 	@GetMapping("notice")
 	public String notice() {
-		return "html/notice";
+		return "html/notice/notice";
+	}
+	@GetMapping("noticeDetail")
+	public String noticeDetail() {
+		return "html/notice/notice_detail";
+	}
+	@GetMapping("noticeWrite")
+	public String noticeBoard() {
+		return "html/notice/notice_write_form";
 	}
 	
 	@GetMapping("memberOut")
 	public String memberOut() {
 		return "html/out";
 	}
-
+	
+	@GetMapping("reviewBoard")
+	public String reviewBoard() {
+		return "html/review/review_board";
+	}
+	@GetMapping("reviewDetail")
+	public String reviewDetail() {
+		return "html/review/review_detail";
+	}
+	@GetMapping("reviewWrite")
+	public String reviewWrite() {
+		return "html/review/review_write_form";
+	}
 	
 	// ======================= 수정중 jsp ===========================
-
 
 	@GetMapping("carLegModify")
 	public String carLegModify() {
@@ -123,14 +156,7 @@ public class HomeController {
 	}
 
 
-	@GetMapping("reviewBoard")
-	public String reviewBoard() {
-		return "html/reviewPage2";
-	}
-	
-	@GetMapping("reviewDetail")
-	public String reviewDetail() {
-		return "html/review_detail2";
-	}
+
+
 	
 }

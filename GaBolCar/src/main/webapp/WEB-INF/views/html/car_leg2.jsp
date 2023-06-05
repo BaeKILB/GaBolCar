@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Car_Leg</title>
  
-<link href="${pageContext.request.contextPath }/resources/css/inc/bootstrap.min.css" rel="stylesheet">
-<script src="${pageContext.request.contextPath }/resources/js/inc/bootstrap.bundle.min.js"></script>
+<link href="${pageContext.request.contextPath }/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="${pageContext.request.contextPath }/resources/js/bootstrap.bundle.min.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/jquery-3.7.0.js"></script>
 
 <link href="${pageContext.request.contextPath }/resources/css/inc/top.css" rel="stylesheet">

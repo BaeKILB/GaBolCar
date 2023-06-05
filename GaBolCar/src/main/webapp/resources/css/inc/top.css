@@ -8,24 +8,7 @@
             border: 0;
         }
 
-        ol,
-        ul {
-        
-            list-style: none;
-      /* 0531 추가 : 부트스트랩 영향 제거 */
-        	padding-left:0 !important;
-        	margin-bottom: 0 !important;
-        }
-        
-   /* 0531 추가 : 부트스트랩 영향 제거 */
-        .h_logo{
-        	margin-bottom: 0 !important;
-        }
-		.top_wrapper , .top_nav{
-		
-            line-height: normal !important;
-		}
-	/* ============================ */
+
         a {
             text-decoration: none;
         }

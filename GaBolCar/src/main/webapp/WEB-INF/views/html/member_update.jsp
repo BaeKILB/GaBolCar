@@ -11,8 +11,8 @@
 	<script src="${pageContext.request.contextPath }/resources/js/jquery-3.7.0.js"></script>
 	<link href="${pageContext.request.contextPath }/resources/css/common.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath }/resources/css/member_update.css" rel="stylesheet">
-	<link href="${pageContext.request.contextPath }/resources/inc/css/top.css" rel="styleSheet">
-	<link href="${pageContext.request.contextPath }/resources/inc/css/footer.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/inc/top.css" rel="styleSheet">
+	<link href="${pageContext.request.contextPath }/resources/css/inc/footer.css" rel="styleSheet">
 </head>
 
 <body>
