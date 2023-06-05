@@ -67,22 +67,11 @@ public class HomeController {
 		return "html/member_update";
 	}
 	
-	//로그인 페이지
-	@GetMapping("login")
-	public String login() {
-		return "html/login";
-	}
 
 	//차량 소개
 	@GetMapping("carInfo")
 	public String carInfo() {
 		return "html/6p";
-	}
-	
-	//회원가입
-	@GetMapping("signup")
-	public String signup() {
-		return "html/signup";
 	}
 	
 
@@ -104,45 +93,72 @@ public class HomeController {
 		return "html/car_leg2";
 	}
 	
+	//로그인 페이지
+	@GetMapping("login")
+	public String login() {
+		return "html/login";
+	}
 	
+	// 아이디 비밀번호 찾기
 	@GetMapping("memberFind")
 	public String memberFind() {
 		return "html/Find";
 	}
+	
+	//회원가입
+	@GetMapping("signup")
+	public String signup() {
+		return "html/signup";
+	}
+	
+	// 사이트 이용 안내
 	@GetMapping("siteHowTo")
 	public String siteHowTo() {
 		return "html/page7";
 	}
+	
+	// 사이트 자주묻는 질문 (FAQ)
 	@GetMapping("siteFAQ")
 	public String siteFAQ() {
 		return "html/faq";
 	}
+	
+	// 공지사항 게시판
 	@GetMapping("notice")
 	public String notice() {
 		return "html/notice/notice";
 	}
+	
+	// 공지사항 글 자세히 보기
 	@GetMapping("noticeDetail")
 	public String noticeDetail() {
 		return "html/notice/notice_detail";
 	}
+	
+	// 공지사항 쓰기
 	@GetMapping("noticeWrite")
 	public String noticeBoard() {
 		return "html/notice/notice_write_form";
 	}
 	
+	// 회원 탈퇴
 	@GetMapping("memberOut")
 	public String memberOut() {
 		return "html/out";
 	}
 	
+	// 리뷰 게시판
 	@GetMapping("reviewBoard")
 	public String reviewBoard() {
 		return "html/review/review_board";
 	}
+	// 리뷰 글 자세히 보기
 	@GetMapping("reviewDetail")
 	public String reviewDetail() {
 		return "html/review/review_detail";
 	}
+	
+	// 리뷰 쓰기 폼
 	@GetMapping("reviewWrite")
 	public String reviewWrite() {
 		return "html/review/review_write_form";
