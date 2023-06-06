@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TaBolCar</title>
+<title>Gabolcar</title>
 <link href="${pageContext.request.contextPath }/resources/css/bootstrap.min.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath }/resources/js/bootstrap.bundle.min.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/jquery-3.7.0.js"></script>
@@ -20,9 +20,14 @@
 <link href="${pageContext.request.contextPath }/resources/css/inc/rentMenu.css" rel="stylesheet">
 
 <link href="${pageContext.request.contextPath }/resources/css/main.css" rel="stylesheet">
+
+<link href="${pageContext.request.contextPath }/resources/css/inc/side_inquiry_btn.css" rel="stylesheet">
+
 </head>
 
 <body>	
+
+
 <nav>
 		<jsp:include page="inc/top1.jsp"></jsp:include>
 	</nav>
@@ -62,17 +67,59 @@
 	--%>
 
 <!-- 렌트 추천 구역 -->
-<article class="container-fluid mx-auto car_recommend_warp">
+<article class="container-fluid mx-auto car_recom_warp">
 	<div class="row">
-		<div class="col-3  car_recommend_title">이달의 추천 차량</div>
+		<div class="col-5  car_recom_title">이달의 추천 차량</div>
 	</div>
-	<div class="row align-items-center car_recommend_list_wrap">
-		<div class="mt-2 col-2 offset-1 d-flex align-items-center justify-content-center ">
-			<div class="review-wrap1">
-				<span class="review-star">5.0</span> <span class="review-car-name">차량이름</span>
-				<div class="review-content"><p>리뷰내용 21313</p></div>
+	<div class="row align-items-center car_recom_list_wrap justify-content-center">
+			<div class="mt-2 col-2 d-flex align-items-center justify-content-center car_recom_item1">
+				<div>
+					<img class="car_recom_img" alt="" src="${pageContext.request.contextPath }/resources/img/car_img/경형/캐스퍼.png">	
+					<div class="car_recom_info_wrap">
+						<p class="car_recom_info_model">캐스퍼 1.0 NA 인스퍼레이션</p>
+						<div class="car_recom_info_list">
+							<span>21년식</span><span>가솔린</span>
+						</div>
+						<p class="car_recom_info_price">일 50,000 원</p>
+					</div>
+				</div>
 			</div>
-		</div>
+			<div class="mt-2 col-2 d-flex align-items-center justify-content-center car_recom_item2">
+			<div>
+					<img class="car_recom_img" alt="" src="${pageContext.request.contextPath }/resources/img/car_img/경형/캐스퍼.png">	
+					<div class="car_recom_info_wrap">
+						<p class="car_recom_info_model">캐스퍼 1.0 NA 인스퍼레이션</p>
+						<div class="car_recom_info_list">
+							<span>21년식</span><span>가솔린</span>
+						</div>
+						<p class="car_recom_info_price">일 50,000 원</p>
+					</div>
+				</div>
+			</div>
+			<div class="mt-2 col-2 d-flex align-items-center justify-content-center car_recom_item3">
+				<div>
+					<img class="car_recom_img" alt="" src="${pageContext.request.contextPath }/resources/img/car_img/경형/캐스퍼.png">	
+					<div class="car_recom_info_wrap">
+						<p class="car_recom_info_model">캐스퍼 1.0 NA 인스퍼레이션</p>
+						<div class="car_recom_info_list">
+							<span>21년식</span><span>가솔린</span>
+						</div>
+						<p class="car_recom_info_price">일 50,000 원</p>
+					</div>
+				</div>
+			</div>
+			<div class="mt-2 col-2 d-flex align-items-center justify-content-center car_recom_item4">
+				<div>
+					<img class="car_recom_img" alt="" src="${pageContext.request.contextPath }/resources/img/car_img/경형/캐스퍼.png">	
+					<div class="car_recom_info_wrap">
+						<p class="car_recom_info_model">캐스퍼 1.0 NA 인스퍼레이션</p>
+						<div class="car_recom_info_list">
+							<span>21년식</span><span>가솔린</span>
+						</div>
+						<p class="car_recom_info_price">일 50,000 원</p>
+					</div>
+				</div>
+			</div>
 	</div>
 </article>
 
@@ -86,7 +133,7 @@
 			class="offset-sm-6  offset-lg-8  offset-md-7 col-1 btn btn-outline-warning review_list_btn" 
 			value="더보기">
 		</div>
-		<div class="row align-items-center review_list_wrap">
+		<div class="row align-items-center review_list_wrap justify-content-center">
 			<%--	리뷰 컨텐츠들을 가로 세로 전부 중앙에 오도록 설정하기
 		
 			d-flex : display:flex 와 동일한 동작 
@@ -98,26 +145,26 @@
 		justify-content-center : justify-content:center 와 동일  --%>
 		
 
-			<div class="mt-2 col-2 offset-1 d-flex align-items-center justify-content-center ">
-				<div class="review-wrap1">
+			<div class="mt-2 col-2  d-flex align-items-center justify-content-center review-wrap1">
+				<div class="">
 					<span class="review-star">5.0</span> <span class="review-car-name">차량이름</span>
 					<div class="review-content"><p>리뷰내용 21313</p></div>
 				</div>
 			</div>
-			<div class="mt-2 col-2 offset-1 d-flex align-items-center justify-content-center">
-				<div class="review-wrap2">
+			<div class="mt-2 col-2  d-flex align-items-center justify-content-center review-wrap2">
+				<div class="">
 					<span class="review-star">5.0</span> <span class="review-car-name">차량이름2</span>
 					<div  class="review-content"><p>리뷰내용 21313</p></div>
 
 				</div>
 			</div>
-			<div class="mt-2 col-2 offset-1 d-flex align-items-center justify-content-center review-wrap3">
+			<div class="mt-2 col-2  d-flex align-items-center justify-content-center review-wrap3">
 				<div class="">
 					<span class="review-star">5.0</span> <span class="review-car-name">차량이름3</span>
 					<div  class="review-content"><p>리뷰내용 21313</p></div>
 				</div>
 			</div>
-			<div class="mt-2 col-2 offset-1 d-flex align-items-center justify-content-center review-wrap4">
+			<div class="mt-2 col-2  d-flex align-items-center justify-content-center review-wrap4">
 				<div class="">
 					<span class="review-star">5.0</span> <span class="review-car-name">차량이름3</span>
 					<div  class="review-content"><p>리뷰내용 21313</p></div>
@@ -176,7 +223,8 @@
 
 	<jsp:include page="inc/footer.jsp"></jsp:include>
 		
-
+	<jsp:include page="inc/side_inquiry_btn.jsp"></jsp:include>
+	
 
 </body>
 </html>

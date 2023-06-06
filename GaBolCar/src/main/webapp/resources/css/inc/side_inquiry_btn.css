@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+
+
+.side_inq_wrap{
+	position: fixed;
+	top: 70%;
+	left: 95%;
+	z-index: 10;
+}
+.side_inq_wrap li{
+	margin: 20px 0;
+		
+}
+
+.side_inq_wrap div{
+	width:50px;
+	height: 50px;
+	padding:3px;
+	border: 2px solid #ff7f02;
+	border-radius: 10px;
+	background-color: white;	
+	
+}
+.side_inq_wrap a{
+	display: block;
+	width:100%;
+	height:100%;
+
+}
+
+
+.side_inq_kakao a{	
+	background: url("../../img/inc/kakao_icon.png");
+	background-position: top left;
+    background-size: contain;
+}
+
+.side_inq_board a{
+	background: url("../../img/inc/inq_icon.png");
+	background-position: top left;
+    background-size: contain;
+}
+
+.side_inq_up a{	
+	background: url("../../img/inc/inq_up_icon.png");
+	background-position: top left;
+    background-size: contain;
+}
+
+/* media */
+
+@media (max-width:1000px){
+	.side_inq_wrap{
+		left: 90%;
+	}
+}
+

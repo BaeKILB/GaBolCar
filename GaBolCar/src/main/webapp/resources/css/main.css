@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 
+/* 좌우 스크롤 생기는 현상 막는 코드 */
 body{
-	overflow-x:hidden;
+	max-width: 100%;
+	overflow-x: hidden;
 }
+
 /* 차량 예약 메뉴 관련 css */
 .main_img_wrap {
 	margin-top: 100px;
@@ -44,8 +47,10 @@ body{
 	vertical-align: middle;
 }
 
-/* 리뷰 컨텐츠 관련 css */
-.review_wrap, .qna_wrap {
+
+
+/* 차량추천 , 리뷰 컨텐츠 , qna 컨텐츠 공통css */
+.car_recom_warp, .review_wrap, .qna_wrap {
 	margin: 30px;
 	padding: 20px;
 	background-color: white;
@@ -54,17 +59,63 @@ body{
 	border-radius: 20px;
 }
 
-.review_title, .qna_title_wrap {
+.car_recom_title, .review_title, .qna_title_wrap {
 	font-size: 2rem;
 	font-weight: bold;
 }
 
+/* 차량 추천 */
+.car_recom_list_wrap{
+	margin: 20px;
+}
+
+.car_recom_list_wrap>div{
+	display: inline-block;
+	width: 270px;
+	height: 300px;
+	border: 2px solid #0B294B;
+	border-radius: 20px;
+	background-color: white;
+	text-align: center;
+	margin: 0 20px;
+	
+}
+
+
+.car_recom_img{
+	display: block;
+	width: 200px;
+}
+
+.car_recom_info_list{
+	margin: 5px;	
+}
+
+.car_recom_info_list span{
+	display: inline-block;
+	margin: 0 5px;
+	padding: 2px;
+	border: 1px solid #ff6600;
+	border-radius: 5px;
+}
+
+.car_recom_info_model{
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.car_recom_info_price{
+	margin-top: 10px;
+	color: #ff6600;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+/* 리뷰 컨텐츠 관련 css */
 .review_list_wrap {
 	margin: 20px;
 }
 
-/* col 로 사용할 태그의 css 에는 margin 사용하면 
-	부트스트랩 그리드가 제대로 적용이 안됨 */
 .review_list_wrap>div {
 	display: inline-block;
 	width: 200px;
@@ -73,7 +124,7 @@ body{
 	border-radius: 20px;
 	background-color: white;
 	text-align: center;
-	/* 	margin: 20px; */
+	margin: 0 40px;
 }
 .review-star{
 	font-size: 2rem;
@@ -208,11 +259,17 @@ body{
 
 /* 일정 이하 크기시 항목 지우기*/
 @media( width < 1370px){
+	.car_recom_item4{	
+		display: none !important;
+	}
 	.review-wrap4{
 		display: none !important;
 	}
 }
 @media( width < 950px){
+	.car_recom_item3{
+		display: none !important;
+	}
 	.review-wrap3{
 		display: none !important;
 	}

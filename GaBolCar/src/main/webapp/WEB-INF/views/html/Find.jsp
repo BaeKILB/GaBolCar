@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TaBolCar - 아이디 , 비밀번호 찾기</title>
+<title>Gabolcar - 아이디 , 비밀번호 찾기</title>
 <script src="${pageContext.request.contextPath }/resources/js/jquery-3.7.0.js"></script>
 <link href="${pageContext.request.contextPath }/resources/css/inc/top.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath }/resources/css/inc/footer.css" rel="stylesheet">

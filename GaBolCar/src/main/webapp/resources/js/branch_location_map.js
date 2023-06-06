@@ -22,7 +22,7 @@ var positions = [
 
 // 05 26 경인수정
 // 이미지 경로 수정
-var imageSrc = "/tabolcar/resources/img/map_marker_icon.png";
+var imageSrc = "/gabolcar/resources/img/map_marker_icon.png";
 
 for (var i = 0; i < positions.length; i ++) {
     

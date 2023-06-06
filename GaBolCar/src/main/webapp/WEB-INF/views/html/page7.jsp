@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TaBolCar - 이용안내</title>
+<title>Gabolcar - 이용안내</title>
 
 <link href="${pageContext.request.contextPath }/resources/css/inc/top.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath }/resources/css/inc/footer.css" rel="stylesheet">

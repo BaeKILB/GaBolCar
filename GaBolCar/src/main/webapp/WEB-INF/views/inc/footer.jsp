@@ -16,10 +16,10 @@
 				<address>
 					<span>부산광역시 부산진구 부전동 112-3 삼한골든게이트 7층(본점)</span> <b>대표</b> <span>홍길동</span><br>
 					<b>TEL</b> <span>051-123-4567</span> <b>FAX</b> <span>051-123-4568</span>
-					<b>E-MAIL</b> <span>contact@tabolcar.co.kr</span>
+					<b>E-MAIL</b> <span>contact@gabolcar.co.kr</span>
 				</address>
 				<div class="area_copy">
-					<p>© 2022 TABOLCAR. All Rights Reserved.</p>
+					<p>© 2023 GABOLCAR. All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
